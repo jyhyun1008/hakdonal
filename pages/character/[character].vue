@@ -19,7 +19,7 @@
         <a href="/character">접기</a>
         <h1>서윤구</h1>
         <div class="box-content">
-            <img src="/public/png/syg.png">
+            <img :src=imgSrc />
             <div class="character-profile-grid">
                 <div class="character-profile-left gwansanggam">한자</div><div>徐輪球</div>
                 <div class="character-profile-left gwansanggam">소속</div><div>관상감</div>
@@ -32,6 +32,8 @@
 
 <script setup>
 import { marked } from 'marked';
+const route = useRoute()
+var imgSrc = `/png/${route.params.character}.png`
 
 var samhaeng = await $fetch('https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/samhaeng.md')
 var text = await $fetch('https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/syg.md')
