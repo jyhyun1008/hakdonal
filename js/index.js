@@ -25,7 +25,7 @@ async function loadMarkdown() {
         for await (let markdown of markdownList) {
             var result = await fetch('./md/'+markdown.id+'.md', {mode: "no-cors"})
             var resultText = await result.text()
-            document.querySelector('markdown#'+markdown.id).innerText += resultText
+            document.querySelector('markdown#'+markdown.id).innerText += marked.parse(resultText)
         }
     }
 }
