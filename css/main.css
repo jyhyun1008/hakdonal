@@ -22,7 +22,7 @@ body {
     box-sizing: border-box;
 }
 
-#navbar a {
+#navbar a, #logo a {
     color: inherit;
     text-decoration: none;
 }
