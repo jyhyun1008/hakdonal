@@ -8,8 +8,6 @@ async function loadContents(page) {
     }
 }
 
-loadContents(page)
-
 async function loadComponents(component) {
     if (document.querySelector(page)) {
         var result = await fetch('./component/'+component+'.html', {mode: "no-cors"})
@@ -18,6 +16,8 @@ async function loadComponents(component) {
     }
 }
 
-loadComponents(decorator)
-loadComponents(navbar)
-loadComponents(concept)
+loadComponents('decorator')
+loadComponents('navbar')
+loadComponents('concept')
+
+loadContents(page)
