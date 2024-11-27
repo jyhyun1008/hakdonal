@@ -43,5 +43,3 @@ async function createGuestNote(text) {
         viewGuestNotes()
     }, 1000);
 }
-
-viewGuestNotes()
