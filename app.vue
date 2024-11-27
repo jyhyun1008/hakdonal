@@ -29,10 +29,10 @@
             <a href="./"><img src="/public/logo.png" /></a>
         </div>
         <div id="navlist">
-            <div><a href="./concept">기획의도</a></div>
-            <div><a href="./character">나오는사람들</a></div>
-            <div><a href="./story">이야기</a></div>
-            <div><a href="./store">가게</a></div>
+            <div><a href="/concept">기획의도</a></div>
+            <div><a href="/character">나오는사람들</a></div>
+            <div><a href="/story">이야기</a></div>
+            <div><a href="/store">가게</a></div>
         </div>
       </div>
       <NuxtPage />
