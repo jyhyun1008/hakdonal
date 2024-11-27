@@ -17,15 +17,15 @@
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/kyk_crop.png"><a href="/character/kyk"><div class="character-list seonggyungwan"><div>김유겸</div><code>성균관</code></div></a></div>
         </div>
         <a href="/character">접기</a>
-        <h1>서윤구</h1>
+        <h1>{{ name }}</h1>
         <div class="box-content">
             <img :src=imgSrc />
             <div class="character-profile-grid">
-                <div class="character-profile-left gwansanggam">한자</div><div>徐輪球</div>
-                <div class="character-profile-left gwansanggam">소속</div><div>관상감</div>
-                <div class="character-profile-left gwansanggam">전공</div><div>천문학</div>
+                <div class="character-profile-left" :class=route.params.character>한자</div><div>{{ hanja }}</div>
+                <div class="character-profile-left" :class=route.params.character>소속</div><div>{{ sosok }}</div>
+                <div class="character-profile-left" :class=route.params.character>신분</div><div>{{ shinbun }}</div>
             </div>
-            <div v-html=marked.parse(text)></div>
+            <div v-html=marked.parse(description)></div>
         </div>
     </div>
 </template>
@@ -36,6 +36,12 @@ const route = useRoute()
 var imgSrc = `/png/${route.params.character}.png`
 
 var samhaeng = await $fetch('https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/samhaeng.md')
-var text = await $fetch('https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/syg.md')
+var text = await $fetch(`https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/${route.params.character}.md`)
+
+var name = text.split('\n')[0]
+var hanja = text.split('\n')[1]
+var sosok = text.split('\n')[2]
+var shinbun = text.split('\n')[3]
+var description = text.split('```')[1]
 
 </script>

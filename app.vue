@@ -66,6 +66,10 @@ body {
   margin: 0;
 }
 
+#nuxt-devtools-container {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -174,31 +178,31 @@ img {
   justify-content: center;
 }
 
-.gwansanggam {
+.gwansanggam, .syg {
   background-color: #15438899;
 }
 
-.jeonigam {
+.jeonigam, .khy {
   background-color: #a1d2c999;
 }
 
-.sayogwon {
+.sayogwon, .kih {
   background-color: #bea58a99;
 }
 
-.yulhakchung {
+.yulhakchung, .ydr {
   background-color: #79919d99;
 }
 
-.dohwaseo {
+.dohwaseo, .odk {
   background-color: #f0989699;
 }
 
-.jangakwon {
+.jangakwon, .ls {
   background-color: #e47b5a99;
 }
 
-.seonggyungwan {
+.seonggyungwan, .kyk {
   background-color: #38383899;
 }
 
