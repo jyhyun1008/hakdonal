@@ -12,7 +12,7 @@ async function loadComponents(component) {
     if (document.querySelector(component)) {
         var result = await fetch('./component/'+component+'.html', {mode: "no-cors"})
         var resultText = await result.text()
-        document.querySelectorAll(component).innerHTML = resultText
+        document.querySelector(component).innerHTML = resultText
     }
 }
 
