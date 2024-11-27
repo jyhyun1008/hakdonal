@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>OO학 생도들의 나날</title>
         <meta name="summary" content="조선후기, 도성 안에 있던 각 잡학 생도들이 서로 비슷한 교복을 맞춰입고 그중 관심사가 비슷한 사람끼리 교류하고 총학생회까지 있었다면 꽤 재밌었지 않았을까. 하는 상상에서 비롯된 캐릭터-중심으로 아무튼 일상을 이어가는 이야기.">
-        <link rel="stylesheet" media="screen" href="./css/main.css?v=0.0.7">
-        <meta property="og:image" content="./assets/001.webp" /> 
+        <meta property="og:image" content="/public/png/001.webp" /> 
         <meta property="og:title" content="OO학 생도들의 나날" /> 
         <meta property="og:description" content="조선후기, 도성 안에 있던 각 잡학 생도들이 서로 비슷한 교복을 맞춰입고 그중 관심사가 비슷한 사람끼리 교류하고 총학생회까지 있었다면 꽤 재밌었지 않았을까. 하는 상상에서 비롯된 캐릭터-중심으로 아무튼 일상을 이어가는 이야기." /> 
       <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
@@ -26,7 +25,7 @@
       </div>
       <div id="navbar">
         <div id="logo">
-            <a href="./"><img src="/public/logo.png" /></a>
+            <a href="/"><img src="/public/logo.png" /></a>
         </div>
         <div id="navlist">
             <div><a href="/concept">기획의도</a></div>
