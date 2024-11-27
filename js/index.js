@@ -1,13 +1,5 @@
 var page = location.href.split('/').pop().split('.')[0]
 
-async function loadContents(page) {
-    if (page == 'index' || !page) {
-        var result = await fetch('./README.md', {mode: "no-cors"})
-        var resultText = await result.text()
-        document.querySelector('.box-content').innerText += resultText
-    }
-}
-
 async function loadComponents() {
     if (document.querySelector('component')) {
         var componentList = document.querySelectorAll('component')
@@ -34,4 +26,8 @@ addEventListener("DOMContentLoaded", async (event) => {
 
     await loadComponents()
     await loadMarkdown()
+
+    if (page == 'index' || !page) {
+        await viewGuestNotes()
+    }
 })
