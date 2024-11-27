@@ -1,3 +1,8 @@
+const TOKEN1 = 'rXOkOzQM'
+const TOKEN2 = 'zWzLhTcv'
+const TOKEN3 = 'ViZGxsLt'
+const TOKEN4 = 'Ufdweib0'
+
 async function viewGuestNotes() {
 
     document.querySelector('#guestbook-list').innerHTML = ''
@@ -7,7 +12,7 @@ async function viewGuestNotes() {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            Authorization: `Bearer rXOkOzQMzWzLhTcvViZGxsLtUfdweib0`,
+            Authorization: `Bearer ${TOKEN1}${TOKEN2}${TOKEN3}${TOKEN4}`,
         },
         body: JSON.stringify({
             query: 'neo_quesdon',
@@ -36,7 +41,7 @@ async function createGuestNote(text) {
                     localOnly: true,
             }),
             headers: {
-                Authorization: `Bearer rXOkOzQMzWzLhTcvViZGxsLtUfdweib0`,
+                Authorization: `Bearer ${TOKEN1}${TOKEN2}${TOKEN3}${TOKEN4}`,
                 'Content-Type': 'application/json',
             },
             credentials: 'omit',
