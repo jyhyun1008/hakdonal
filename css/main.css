@@ -90,6 +90,14 @@ input, textarea, button {
     flex-direction: column;
 }
 
+.guestbook-text {
+    margin-bottom: 10px;
+}
+
+.guestbook-text > span {
+    font-size: 0.8em;
+}
+
 /*decorator*/
 
 #top-decorator {

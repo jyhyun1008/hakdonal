@@ -25,21 +25,24 @@ async function viewGuestNotes() {
 }
 
 async function createGuestNote(text) {
-
-    fetch("https://peacht.art/api/notes/create", {
-        method: 'POST',
-        body: JSON.stringify({
-                text: text,
-                visibility: 'specified',
-                localOnly: true,
-        }),
-        headers: {
-            Authorization: `Bearer rXOkOzQMzWzLhTcvViZGxsLtUfdweib0`,
-            'Content-Type': 'application/json',
-        },
-        credentials: 'omit',
-    });
-    setTimeout(() => {
-        viewGuestNotes()
-    }, 1000);
+    if (text.length<5) {
+        alert('5글자 이상 입력해 주세요.')
+    } else {
+        fetch("https://peacht.art/api/notes/create", {
+            method: 'POST',
+            body: JSON.stringify({
+                    text: text,
+                    visibility: 'specified',
+                    localOnly: true,
+            }),
+            headers: {
+                Authorization: `Bearer rXOkOzQMzWzLhTcvViZGxsLtUfdweib0`,
+                'Content-Type': 'application/json',
+            },
+            credentials: 'omit',
+        });
+        setTimeout(() => {
+            viewGuestNotes()
+        }, 1000);
+    }
 }
