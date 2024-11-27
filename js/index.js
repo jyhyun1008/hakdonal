@@ -8,17 +8,30 @@ async function loadContents(page) {
     }
 }
 
-async function loadComponents(component) {
-    if (document.querySelector(component)) {
-        var result = await fetch('./component/'+component+'.html', {mode: "no-cors"})
-        var resultText = await result.text()
-        document.querySelector(component).innerHTML = resultText
+async function loadMarkdown() {
+    if (document.querySelector('markdown')) {
+        var markdownList = document.querySelectorAll('markdown')
+        for await (let markdown of markdownList) {
+            var result = await fetch('./md/'+markdown.id+'.md', {mode: "no-cors"})
+            var resultText = await result.text()
+            document.querySelector('markdown#'+markdown.id).innerText += resultText
+        }
+    }
+}
+
+async function loadComponents() {
+    if (document.querySelector('component')) {
+        var componentList = document.querySelectorAll('component')
+        for await (let component of componentList) {
+            var result = await fetch('./component/'+component.id+'.html', {mode: "no-cors"})
+            var resultText = await result.text()
+            document.querySelector('component#'+component.id).innerHTML = resultText
+        }
     }
 }
 
 addEventListener("DOMContentLoaded", async (event) => {
 
-    loadComponents('decorator')
-    loadComponents('navbar')
-    loadComponents('concept')
+    loadComponents()
+    loadMarkdown()
 })
