@@ -16,8 +16,12 @@ async function loadComponents(component) {
     }
 }
 
-loadComponents('decorator')
-loadComponents('navbar')
-loadComponents('concept')
 
-loadContents(page)
+addEventListener("DOMContentLoaded", async (event) => {
+
+    loadComponents('decorator')
+    loadComponents('navbar')
+    loadComponents('concept')
+    
+    loadContents(page)
+})
