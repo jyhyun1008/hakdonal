@@ -8,17 +8,6 @@ async function loadContents(page) {
     }
 }
 
-async function loadMarkdown() {
-    if (document.querySelector('markdown')) {
-        var markdownList = document.querySelectorAll('markdown')
-        for await (let markdown of markdownList) {
-            var result = await fetch('./md/'+markdown.id+'.md', {mode: "no-cors"})
-            var resultText = await result.text()
-            document.querySelector('markdown#'+markdown.id).innerText += resultText
-        }
-    }
-}
-
 async function loadComponents() {
     if (document.querySelector('component')) {
         var componentList = document.querySelectorAll('component')
@@ -30,8 +19,19 @@ async function loadComponents() {
     }
 }
 
+async function loadMarkdown() {
+    if (document.querySelector('markdown')) {
+        var markdownList = document.querySelectorAll('markdown')
+        for await (let markdown of markdownList) {
+            var result = await fetch('./md/'+markdown.id+'.md', {mode: "no-cors"})
+            var resultText = await result.text()
+            document.querySelector('markdown#'+markdown.id).innerText += resultText
+        }
+    }
+}
+
 addEventListener("DOMContentLoaded", async (event) => {
 
-    loadComponents()
-    loadMarkdown()
+    await loadComponents()
+    await loadMarkdown()
 })
