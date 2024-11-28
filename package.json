@@ -12,6 +12,7 @@
   "dependencies": {
     "marked": "^15.0.2",
     "nuxt": "^3.14.1592",
+    "rss-parser": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
   }
