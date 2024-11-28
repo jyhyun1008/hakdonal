@@ -176,6 +176,7 @@ img {
   display: none;
   align-items: center;
   justify-content: center;
+  background-color: #00000099;
 }
 
 .gwansanggam, .syg {

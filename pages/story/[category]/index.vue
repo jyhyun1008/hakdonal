@@ -30,15 +30,15 @@ async function parseRss() {
     var article_pubdate = feed.split('<pubDate>')
     var article_link = feed.split('isPermaLink="true">')
 
-    for (let i=0; i< article_title.length-1; i++) {
-        if (article_title[i+1].includes('학 생도들의')) {
+    for (let i=1; i< article_title.length; i++) {
+        if (article_title[i].includes('학 생도들의')) {
             articles.push({
-                title:article_title[i+1].split(']]></title>')[0].split(' - ')[2],
-                category: article_title[i+1].split(']]></title>')[0].split(' - ')[1],
-                url: article_link[i+1].split('</guid>')[0].split('post/')[1],
-                pubDate: article_pubdate[i+1].split('</pubDate>')[0]
+                title:article_title[i].split(']]></title>')[0].split(' - ')[2],
+                category: article_title[i].split(']]></title>')[0].split(' - ')[1],
+                url: article_link[i].split('</guid>')[0].split('post/')[1],
+                pubDate: article_pubdate[i].split('</pubDate>')[0]
             })
-            categories.push(article_title[i+1].split(']]></title>')[0].split(' - ')[1])
+            categories.push(article_title[i].split(']]></title>')[0].split(' - ')[1])
         }
     }
 
