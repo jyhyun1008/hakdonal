@@ -1,8 +1,9 @@
 <template>
     <div id="container">
         <h1>{{ route.params.category }}</h1>
-        <div style="display: flex; gap: 12px;">
-            <a href="/story">돌아가기</a>
+        <div style="padding-bottom: 5px;"><a href="/story">돌아가기</a></div>
+        <div style="display: flex; gap: 12px; padding-bottom: 5px">
+            시리즈 목록: 
             <a v-for="category of categories" :href="`/story/${category}`">{{ category }}</a>
         </div>
         <div class="box-content" style="display: flex; flex-direction: column; gap: 2px;">
@@ -32,12 +33,12 @@ async function parseRss() {
     for (let i=0; i< article_title.length-1; i++) {
         if (article_title[i+1].includes('학 생도들의')) {
             articles.push({
-                title:article_title[i+1].split(']]></title>')[0].split('-')[2],
-                category: article_title[i+1].split(']]></title>')[0].split('-')[1],
+                title:article_title[i+1].split(']]></title>')[0].split(' - ')[2],
+                category: article_title[i+1].split(']]></title>')[0].split(' - ')[1],
                 url: article_link[i+1].split('</guid>')[0].split('post/')[1],
                 pubDate: article_pubdate[i+1].split('</pubDate>')[0]
             })
-            categories.push(article_title[i+1].split(']]></title>')[0].split('-')[1])
+            categories.push(article_title[i+1].split(']]></title>')[0].split(' - ')[1])
         }
     }
 
