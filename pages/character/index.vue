@@ -9,6 +9,7 @@
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/khy_crop.png"><a href="/character/khy"><div class="character-list jeonigam"><div>강호영</div><code>전의감</code></div></a></div>
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/kih_crop.png"><a href="/character/kih"><div class="character-list sayogwon"><div>김인호</div><code>사역원</code></div></a></div>
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/ydr_crop.png"><a href="/character/ydr"><div class="character-list yulhakchung"><div>유도리</div><code>율학청</code></div></a></div>
+            <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/pys_crop.png"><a href="/character/pys"><div class="character-list sanhakchung"><div>박이선</div><code>산학청</code></div></a></div>
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/odk_crop.png"><a href="/character/odk"><div class="character-list dohwaseo"><div>오다경</div><code>도화서</code></div></a></div>
             <div class="relative" style="aspect-ratio: 1 / 1;"><img src="/public/png/ls_crop.png"><a href="/character/ls"><div class="character-list jangakwon"><div>이슬</div><code>장악원</code></div></a></div>
         </div>

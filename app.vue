@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>OO학 생도들의 나날</title>
         <meta name="summary" content="조선후기, 도성 안에 있던 각 잡학 생도들이 서로 비슷한 교복을 맞춰입고 그중 관심사가 비슷한 사람끼리 교류하고 총학생회까지 있었다면 꽤 재밌었지 않았을까. 하는 상상에서 비롯된 캐릭터-중심으로 아무튼 일상을 이어가는 이야기.">
-        <meta property="og:image" content="/public/png/001.webp" /> 
+        <meta property="og:image" content="/public/png/key_visual.jpg" /> 
         <meta property="og:title" content="OO학 생도들의 나날" /> 
         <meta property="og:description" content="조선후기, 도성 안에 있던 각 잡학 생도들이 서로 비슷한 교복을 맞춰입고 그중 관심사가 비슷한 사람끼리 교류하고 총학생회까지 있었다면 꽤 재밌었지 않았을까. 하는 상상에서 비롯된 캐릭터-중심으로 아무튼 일상을 이어가는 이야기." /> 
       <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
@@ -14,13 +14,14 @@
     <NuxtLayout>
       <div id="decorator">
         <div id="top-decorator">
-          <div style="background-color: #154388;"></div>
-          <div style="background-color: #a1d2c9;"></div>
-          <div style="background-color: #bea58a;"></div>
-          <div style="background-color: #79919d;"></div>
-          <div style="background-color: #f09896;"></div>
-          <div style="background-color: #e47b5a;"></div>
-          <div style="background-color: #383838;"></div>
+          <div style="background-color: var(--gwansanggam);"></div>
+          <div style="background-color: var(--jeonigam);"></div>
+          <div style="background-color: var(--sayogwon);"></div>
+          <div style="background-color: var(--yulhakchung);"></div>
+          <div style="background-color: var(--sanhakchung);"></div>
+          <div style="background-color: var(--dohwaseo);"></div>
+          <div style="background-color: var(--jangakwon);"></div>
+          <div style="background-color: var(--seonggyungwan);"></div>
       </div>  
       </div>
       <div id="navbar">
@@ -28,7 +29,7 @@
             <a href="/"><img src="/public/logo.png" /></a>
         </div>
         <div id="navlist">
-            <div><a href="/concept">기획의도</a></div>
+            <div><a href="/concept">소개</a></div>
             <div><a href="/character">나오는사람들</a></div>
             <div><a href="/story">이야기</a></div>
             <div><a href="/store">가게</a></div>
@@ -58,6 +59,22 @@
 
 :root {
   --accent: #79919d;
+  --gwansanggam: #8c7ebf;
+  --gwansanggam-trans: #8c7ebf99;
+  --jeonigam: #a1d2c9;
+  --jeonigam-trans: #a1d2c999;
+  --sayogwon: #bea58a;
+  --sayogwon-trans: #bea58a99;
+  --yulhakchung: #79919d;
+  --yulhakchung-trans: #79919d99;
+  --sanhakchung: #BDD7AE;
+  --sanhakchung-trans: #BDD7AE99;
+  --dohwaseo: #f09896;
+  --dohwaseo-trans: #f0989699;
+  --jangakwon: #e47b5a;
+  --jangakwon-trans: #e47b5a99;
+  --seonggyungwan: #45548b;
+  --seonggyungwan-trans: #45548b99;
 }
 
 body {
@@ -111,6 +128,11 @@ a {
   text-decoration: none;
 }
 
+li {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 #navbar {
   display: flex;
   width: 100%;
@@ -143,7 +165,7 @@ img {
 
 .box-content {
   width: 100%;
-  border: 1px solid #79919d;
+  border: 1px solid var(--accent);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
@@ -180,31 +202,35 @@ img {
 }
 
 .gwansanggam, .syg {
-  background-color: #15438899;
+  background-color: var(--gwansanggam-trans);
 }
 
 .jeonigam, .khy {
-  background-color: #a1d2c999;
+  background-color: var(--jeonigam-trans);
 }
 
 .sayogwon, .kih {
-  background-color: #bea58a99;
+  background-color: var(--sayogwon-trans);
 }
 
 .yulhakchung, .ydr {
-  background-color: #79919d99;
+  background-color: var(--yulhakchung-trans);
+}
+
+.sanhakchung, .pys {
+  background-color: var(--sanhakchung-trans);
 }
 
 .dohwaseo, .odk {
-  background-color: #f0989699;
+  background-color: var(--dohwaseo-trans);
 }
 
 .jangakwon, .ls {
-  background-color: #e47b5a99;
+  background-color: var(--jangakwon-trans);
 }
 
 .seonggyungwan, .kyk {
-  background-color: #38383899;
+  background-color: var(--seonggyungwan-trans);
 }
 
 .relative:hover .character-list {
