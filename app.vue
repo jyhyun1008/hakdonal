@@ -257,6 +257,22 @@ img {
   margin-bottom: 10px;
 }
 
+.article-items {
+  padding: 4px 0;
+}
+
+.article-items:not(:last-child) {
+  border-bottom: 1px solid var(--accent);
+}
+
+.prevnext {
+  width: 100%;
+  border: 1px solid var(--accent);
+  padding: 4px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 /*decorator*/
 
 #top-decorator {
