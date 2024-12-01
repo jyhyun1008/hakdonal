@@ -10,10 +10,14 @@
             </div>
         </div>
         <div v-else class="box-content">현재 판매 중인 상품이 없습니다.</div>
+        <h1>부스 일정</h1>
+        <div class="box-content" v-html=marked.parse(offline)></div>
     </div>
 </template>
 
 <script setup>
+
+import { marked } from 'marked';
 
 var content = await $fetch('https://proxy.rongo.moe/?url=https://marpple.shop/kr/peachtart/products/')
 content = content.replace(/\n/gm, '').replace(/\s{1,8}/gm, ' ')
@@ -39,5 +43,7 @@ async function parseRss() {
 }
 
 await parseRss()
+
+var offline = await $fetch('https://raw.githubusercontent.com/jyhyun1008/hakdonal/main/md/offline.md')
 
 </script>
