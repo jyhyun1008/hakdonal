@@ -118,6 +118,11 @@ input, textarea, button {
   font-family: 'HakgyoansimByeoljari';
 }
 
+figure {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
 #navbar a, #logo a {
   color: inherit !important;
   text-decoration: none;
