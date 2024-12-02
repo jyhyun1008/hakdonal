@@ -40,7 +40,7 @@ async function parseRss() {
                 url: article_link[i+1].split('</guid>')[0].split('post/')[1],
                 pubDate: article_pubdate[i+1].split('</pubDate>')[0]
             })
-            categories.push(article_title[i+1].split(']]></title>')[0].split('-')[1])
+            categories.push(article_title[i+1].split(']]></title>')[0].split(' - ')[1])
         }
     }
 
