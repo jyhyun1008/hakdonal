@@ -81,6 +81,7 @@ body {
   font-family: 'HakgyoansimByeoljari';
   padding: 0;
   margin: 0;
+  line-height: 1.8rem;
 }
 
 #nuxt-devtools-container {
@@ -92,7 +93,7 @@ body {
 }
 
 code {
-  padding: 4px;
+  padding: 0 4px;
   background-color: #00000033;
   border-radius: 5px;
 }
@@ -133,9 +134,20 @@ a {
   text-decoration: none;
 }
 
-li {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  background-color: #00000011;
+}
+
+ul, ol,blockquote {
+  padding-inline-start: 1em;
+}
+
+li, p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
 #navbar {
@@ -179,10 +191,6 @@ img {
 #guestbook-form {
   display: flex;
   flex-direction: column;
-}
-
-.guestbook-text {
-  margin-top: 10px;
 }
 
 .guestbook-text > span {
@@ -256,7 +264,6 @@ img {
 }
 
 .character-profile-left {
-  padding: 4px;
   border-radius: 10px;
   color: white;
   margin-bottom: 10px;
