@@ -7,7 +7,7 @@
             <a v-for="category of categories" :href="`/story/${category}`">{{ category }}</a>
         </div>
         <div class="box-content" style="display: flex; flex-direction: column; gap: 2px;">
-            <div v-for="article of articles" class="article-items"><a :href="`/story/${article.category}/${article.url}`"><span>{{ article.title }}</span> <code>{{ article.category }}</code></a></div>
+            <div v-for="article of articles_category" class="article-items"><a :href="`/story/${article.category}/${article.url}`"><span>{{ article.title }}</span> <code>{{ article.category }}</code></a></div>
         </div>
     </div>
 </template>
@@ -19,6 +19,7 @@ const route = useRoute()
 
 var articles = []
 var categories = []
+var articles_category
 
 async function parseRss() {
 
@@ -44,6 +45,8 @@ async function parseRss() {
 
     var categorieset = new Set(categories);
     categories = [...categorieset];
+
+    articles_category = articles.filter((atc) => atc.category == route.params.category)
 
 }
 
