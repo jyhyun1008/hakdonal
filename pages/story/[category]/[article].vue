@@ -59,7 +59,7 @@ if (currentIndex < articles.length - 1) {
 }
 
 let content_img = []
-let content_html = content.split('div class="post-content v2 editor-v5   text-left font-sans-serif" id="post-content">')[1].split('<section class="pay pay-support"><div class="vcard">')[0]
+let content_html = content.split('id="post-content">')[1].split('<section class="pay pay-support"><div class="vcard">')[0]
 content_html = content_html.replace(/img src\=\"(.+)\" alt\=\"(.+)\"/gm, 'img src="$2" alt=""')
 
 var content_list = content.split('<div class="photoset-inner">')
