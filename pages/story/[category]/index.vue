@@ -23,7 +23,7 @@ var articles_category
 
 async function parseRss() {
 
-    const CORS_PROXY = "https://proxy.rongo.moe/?url=" //나중에 다른 서버로 바꿔줘야함
+    const CORS_PROXY = "https://proxy.peacht.art/?url=" //나중에 다른 서버로 바꿔줘야함
 
     const feed = await $fetch(CORS_PROXY + 'http://postype.com/@peacht-art/rss')
 

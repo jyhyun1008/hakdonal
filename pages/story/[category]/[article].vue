@@ -17,7 +17,7 @@
 <script setup>
 
 const route = useRoute()
-const CORS_PROXY = "https://proxy.rongo.moe/?url=" //나중에 다른 서버로 바꿔줘야함
+const CORS_PROXY = "https://proxy.peacht.art/?url=" //나중에 다른 서버로 바꿔줘야함
 
 var articles = []
 

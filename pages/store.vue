@@ -19,7 +19,7 @@
 
 import { marked } from 'marked';
 
-var content = await $fetch('https://proxy.rongo.moe/?url=https://marpple.shop/kr/peachtart/products/')
+var content = await $fetch('https://proxy.peacht.art/?url=https://marpple.shop/kr/peachtart/products/')
 content = content.replace(/\n/gm, '').replace(/\s{1,8}/gm, ' ')
 var contentList = content.split('data-rune-parent="ProductCardList"')
 
